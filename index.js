@@ -6,6 +6,7 @@ const { MongoClient, ObjectId } = require("mongodb");
 const dotenv = require("dotenv").config();
 const URL = process.env.DB;
 
+
 const DB_NAME = "movies_db";
 
 const COLLECTION_NAME = "movies";
@@ -127,17 +128,7 @@ app.post("/movie/book-movie", async (req, res) => {
       (s) => s.id === bookingRequest.showId
     );
 
-     const updateResult = await COLLECTION_NAME.updateOne(
-      {
-        _id: new ObjectId(bookingRequest.movieId)
 
-      },
-      {
-         $set: {
-          [`show.${date}.${showIndex}.seats`]: updateSeats
-         }
-      }
-    )
 
     // Create booking document
     const bookingData = {
@@ -151,8 +142,18 @@ app.post("/movie/book-movie", async (req, res) => {
       createdAt: new Date(),
     };
 
+
     // Insert booking into the bookings collection
     const bookingResult = await bookingsCollection.insertOne(bookingData);
+
+    const updateResult = await moviesCollection.updateOne(
+      { _id: new ObjectId(bookingRequest.movieId) }, // Filter criteria
+      {
+        $set: {
+          [`shows.${date}.${showIndex}.seats`]: updateSeats, // Correct field update
+        },
+      }
+    );
 
     if (!bookingResult.insertedId) {
       return res.status(500).json({ message: "Failed to create booking" });
