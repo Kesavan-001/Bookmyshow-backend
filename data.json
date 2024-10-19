@@ -1,0 +1,87 @@
+[
+    {
+        "image": "https://wallpapercave.com/wp/wp7836444.jpg",
+        "title": "Demon Slayer Mugen Train",
+        "director": "Haruo Sotozaki",
+        "description": "Tanjiro and his allies join forces with a powerful swordsmen to battle demons aboard a moving train.",
+        "year": 2021,
+        "genre": "Anime,Action",
+        "shows": {
+          "2024-10-20": [
+            {
+              "time": "07:00 AM",
+              "seats": 100,
+              "id": "show_20241015_1"
+            },
+            {
+              "time": "10:00 AM",
+              "seats": 50,
+              "id": "show_20241015_2"
+            }
+          ],
+          "2024-10-21": [
+            {
+              "time": "03:00 PM",
+              "seats": 130,
+              "id": "show_20241016_1"
+            },
+            {
+              "time": "06:00 PM",
+              "seats": 60,
+              "id": "show_20241016_2"
+            }
+          ],
+          "2024-10-22": [
+            {
+              "time": "10:00 PM",
+              "seats": 130,
+              "id": "show_20241017_1"
+            },
+            {
+              "time": "01:00 PM",
+              "seats": 60,
+              "id": "show_20241017_2"
+            }
+          ],
+          "2024-10-23": [
+            {
+              "time": "07:00 PM",
+              "seats": 130,
+              "id": "show_20241018_1"
+            },
+            {
+              "time": "11:00 PM",
+              "seats": 60,
+              "id": "show_20241018_2"
+            }
+          ],
+          "2024-10-24": [
+            {
+              "time": "04:00 PM",
+              "seats": 130,
+              "id": "show_20241019_1"
+            },
+            {
+              "time": "07:00 PM",
+              "seats": 60,
+              "id": "show_20241019_2"
+            }
+          ],
+          "2024-10-25": [
+            {
+              "time": "02:00 PM",
+              "seats": 130,
+              "id": "show_20241020_1"
+            },
+            {
+              "time": "05:00 PM",
+              "seats": 60,
+              "id": "show_20241020_2"
+            }
+          ]
+        }
+    }
+
+]
+
+
