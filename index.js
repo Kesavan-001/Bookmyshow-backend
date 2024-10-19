@@ -127,6 +127,18 @@ app.post("/movie/book-movie", async (req, res) => {
       (s) => s.id === bookingRequest.showId
     );
 
+     const updateResult = await COLLECTION_NAME.updateOne(
+      {
+        _id: new ObjectId(bookingRequest.movieId)
+
+      },
+      {
+         $set: {
+          [`show.${date}.${showIndex}.seats`]: updateSeats
+         }
+      }
+    )
+
     // Create booking document
     const bookingData = {
       movieId: bookingRequest.movieId,
